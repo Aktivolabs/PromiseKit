@@ -105,6 +105,9 @@ Pod::Spec.new do |s|
     ss.osx.deployment_target = '10.13'
     ss.watchos.deployment_target = '4.0'
     ss.tvos.deployment_target = '10.0'
+     s.resource_bundles = {
+  'Lottie' => ['lottie-swift/src/Resources/PrivacyInfo.xcprivacy'],
+}
   end
 
   s.subspec 'CoreLocation' do |ss|
@@ -145,6 +148,9 @@ Pod::Spec.new do |s|
   s.subspec 'HealthKit' do |ss|
     ss.source_files = Dir['Extensions/HealthKit/Sources/**/*']
     ss.exclude_files = 'Extensions/HealthKit/Sources/*.plist'
+     s.resource_bundles = {
+  'Lottie' => ['lottie-swift/src/Resources/PrivacyInfo.xcprivacy'],
+}
     ss.dependency 'PromiseKit/CorePromise'
     ss.frameworks = 'HealthKit'
     ss.ios.deployment_target = '10.0'
